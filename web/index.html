@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="cal">
+        <input type="text" id="entry" class="enter" placeholder="0">
+        <div class="button">
+            <div>
+                <button onclick="document.getElementById('entry').value = ''" >C</button>
+                <button   onclick="document.getElementById('entry').value = document.getElementById('entry').value.slice(0, -1)" id="del">DEL</button>
+                <button onclick="if(document.getElementById('entry').value == ''){document.getElementById('entry').value = ''}else if (Number(document.getElementById('entry').value) > 0){document.getElementById('entry').value ='-' + document.getElementById('entry').value}else{document.getElementById('entry').value = Math.abs(parseFloat(document.getElementById('entry').value))}" id="neg">-/+</button>
+                <button onclick="document.getElementById('entry').value = document.getElementById('entry').value / 100">%</button>
+            </div>
+            <div>
+                <button class="number" onclick="document.getElementById('entry').value += 7">7</button>
+                <button class="number" onclick="document.getElementById('entry').value += 8">8</button>
+                <button class="number" onclick="document.getElementById('entry').value += 9">9</button>
+                <button class="number" onclick="document.getElementById('entry').value += '/'">/</button>
+            </div> 
+            <div>
+                <button class="number" onclick="document.getElementById('entry').value += 4">4</button>
+                <button class="number" onclick="document.getElementById('entry').value += 5">5</button>
+                <button class="number" onclick="document.getElementById('entry').value += 6">6</button>
+                <button class="number" onclick="document.getElementById('entry').value += '*'">X</button>
+            </div>
+            <div>
+                <button class="number" onclick="document.getElementById('entry').value += 1">1</button>
+                <button class="number" onclick="document.getElementById('entry').value += 2">2</button>
+                <button class="number" onclick="document.getElementById('entry').value += 3">3</button>
+                <button class="number" onclick="document.getElementById('entry').value += '-'">-</button>
+            </div>
+            <div>
+                <button class="number" onclick="document.getElementById('entry').value += 0">0</button>
+                <button class="number" onclick="document.getElementById('entry').value += '00'">00</button>
+                <button id="equ" onclick="document.getElementById('entry').value = eval(document.getElementById('entry').value)">=</button>
+                <button class="number" onclick="document.getElementById('entry').value += '+'">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js">
+        
+
+    
+
+        </script>
+</body>
+</html>
